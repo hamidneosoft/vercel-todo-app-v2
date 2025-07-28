@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.11" }
+    },
+    {
+      "src": "templates/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "static/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/index.py"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "FLASK_SECRET_KEY": "@flask_secret_key",
+    "GOOGLE_API_KEY": "@google_api_key",
+    "DATABASE_URL": "@database_url"
+  }
+}

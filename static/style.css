@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #0056b3;
+}
+
+.add-todo-section, .translation-settings, .todo-list-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+li.completed {
+    background-color: #e6ffe6;
+    border-color: #c6f6c6;
+    text-decoration: line-through;
+    color: #888;
+}
+
+li .todo-details {
+    flex-grow: 1;
+}
+
+li .todo-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+li button {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.translate-btn {
+    background-color: #28a745;
+}
+
+.translate-btn:hover {
+    background-color: #218838;
+}
+
+.mark-complete-btn {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.mark-complete-btn:hover {
+    background-color: #e0a800;
+}
+
+.todo-title {
+    font-weight: bold;
+}
+.todo-description {
+    font-style: italic;
+    font-size: 0.9em;
+}
+.todo-priority {
+    font-size: 0.9em;
+    color: #555;
+}
+.todo-due-date {
+    font-size: 0.9em;
+    color: #555;
+}
+.translated-text {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dashed #ccc;
+    font-style: italic;
+    color: #007bff;
+}

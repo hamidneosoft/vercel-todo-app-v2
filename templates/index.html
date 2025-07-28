@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask To-Do App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple To-Do List</h1>
+
+        <div class="add-todo-section">
+            <h2>Add New To-Do</h2>
+            <form id="addTodoForm">
+                <input type="text" id="newTitle" placeholder="Title" required>
+                <textarea id="newDescription" placeholder="Description (optional)"></textarea>
+                <select id="newPriority">
+                    <option value="None">None</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <input type="date" id="newDueDate">
+                <button type="submit">Add To-Do</button>
+            </form>
+        </div>
+
+        <div class="translation-settings">
+            <h2>Translation Settings</h2>
+            <label for="targetLanguage">Translate to:</label>
+            <select id="targetLanguage">
+                <option value="English">English</option>
+                <option value="Spanish">Spanish</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Marathi">Marathi</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Chinese (Simplified)">Chinese (Simplified)</option>
+                <option value="Korean">Korean</option>
+                <option value="Portuguese">Portuguese</option>
+            </select>
+        </div>
+
+        <div class="todo-list-section">
+            <h2>Your To-Do List</h2>
+            <div id="pendingTasks">
+                <h3>Pending Tasks</h3>
+                <ul id="incompleteTodosList">
+                    </ul>
+            </div>
+
+            <div id="completedTasks">
+                <h3>Completed Tasks</h3>
+                <ul id="completedTodosList">
+                    </ul>
+            </div>
+            <p id="noTodosMessage" style="display: none;">No To-Do items yet! Add one above.</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
