@@ -12,7 +12,7 @@ load_dotenv()
 
 app = Flask(__name__)
 # Flask Secret Key for session management, crucial for production
-app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', 'your_super_secret_fallback_key')
+app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
 
 try:
     GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
